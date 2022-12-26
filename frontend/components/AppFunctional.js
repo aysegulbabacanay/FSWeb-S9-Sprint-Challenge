@@ -4,18 +4,16 @@ import React, { useState } from 'react'
 // (1, 2) (2, 2) (3, 2)
 // (1, 3) (2, 3) (3, 3)
 
-// (2,2) => 4 eşitlemem gerek,artık koordinatla çalışıyorum. 3 eleman geçtim x=2 5 oldum (-1 çıkarcam) 3 + 2 (-1)
-// (3,3) => 8   3 + 3 + 3 (-1)
-// (3,1) => 2   0 + 3 (-1)
+
 
 //(y-1) * 3 + x -1 (3 satırdaki eleman sayısı)
 
 export default function AppFunctional(props) {
 
  
-// ilk başta 0 yazdık 0.karede olsun dedik.sonradan koordinat olarak tutalım dedik
+
 const[konum,setKonum]=useState([2,2]);
-// aşağıdaki hamle sayısı
+
 const[hamleSayisi,setHamleSayisi]=useState(0);
 
 const[mesaj,setMesaj]=useState("");
@@ -100,13 +98,13 @@ const handleSubmit = (event) => {
     <div id="wrapper" className={props.className}>
       <div className="info">
         <h3 id="coordinates">Koordinatlar ({konum.join(", ")})</h3>
-         {/* hamleSayisi kısmında 0 yazıyordu önceden */}
+      
         <h3 id="steps">{hamleSayisi} kere ilerlediniz</h3>
       </div>
       <div id="grid">
         {
           [0, 1, 2, 3, 4, 5, 6, 7, 8].map(idx => (
-            // idx===4 yazıyodu,biz konuma 4 değrini verdiğimz için 4 gördüğümüz yere konum yazdık
+            
             <div key={idx} className={`square${idx === konumAsIndex ? ' active' : ''}`}>
               {idx === konumAsIndex ? 'B' : null}
             </div>
