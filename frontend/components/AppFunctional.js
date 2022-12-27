@@ -19,7 +19,7 @@ const[hamleSayisi,setHamleSayisi]=useState(0);
 const[mesaj,setMesaj]=useState("");
 const [email, setEmail] = useState("");
 
-const konumAsIndex = (konum[1]-1)*  3+ konum[0]- 1
+const konumAsIndex = (konum[1]-1) * 3+ konum[0]- 1
 
 // function sagaGit() {
 //   setKonum(konum+1);
@@ -27,7 +27,7 @@ const konumAsIndex = (konum[1]-1)*  3+ konum[0]- 1
 // }
 
 function asagiGit() {
-  if(konum[1]<3){ 
+  if(konum[1] < 3){ 
 setKonum([konum[0],konum[1]+1]);
 setHamleSayisi(hamleSayisi+1)
 }
@@ -36,7 +36,7 @@ else{
 }
 }
 function yukariGit() {
-  if(konum[1]>1){ 
+  if(konum[1] > 1){ 
 setKonum([konum[0],konum[1]-1]);
 setHamleSayisi(hamleSayisi+1)
 }
@@ -46,7 +46,7 @@ else{
 }
 
 function sagaGit() {
-  if(konum[0]<3){
+  if(konum[0] < 3){
     setKonum ([konum[0]+1,konum[1]])
     setHamleSayisi(hamleSayisi + 1);
   }else{
@@ -55,7 +55,7 @@ function sagaGit() {
 } 
 
 function solaGit() {
-  if(konum[0]>1){
+  if(konum[0] > 1){
     setKonum ([konum[0]-1,konum[1]])
     setHamleSayisi(hamleSayisi + 1);
   }else{
